@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -9,6 +11,8 @@
     --nav-color: #1992D4;
     --header-color: #FFFFFF;
     --main-color: #E2E8F0;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -29,7 +33,62 @@ nav {
     grid-row-end: 3;
 
     padding: 20px;
+    padding-right: 100px;
 }
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.logo > * {
+    color: var(--header-color);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.logo label {
+    font-size: 35px;
+}
+
+.logo svg {
+    height: 60px;
+    width: 60px;
+}
+
+.nav-ul-container {
+    color: var(--header-color);
+    margin-bottom: 40px;
+}
+
+.nav-ul-container > ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.nav-ul-container > ul > li {
+    margin: 10px 0;
+}
+
+.nav-ul-container svg {
+    height: 2em;
+    width: 2em;
+}
+
+.nav-ul-container a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
+
+
 
 main {
     background-color: var(--main-color);
