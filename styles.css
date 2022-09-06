@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --nav-color: #1992D4;
+    --header-color: #FFFFFF;
+    --main-color: #E2E8F0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+    grid-template-rows: 1fr 5fr;
+
+    height: 100vh;
+}
+
+header {
+    background-color: var(--header-color);
+}
+
+nav {
+    background-color: var(--nav-color);
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    padding: 20px;
+}
+
+main {
+    background-color: var(--main-color);
+
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
