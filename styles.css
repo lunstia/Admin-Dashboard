@@ -49,11 +49,9 @@ nav {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-}
-
-.logo label {
     font-size: 35px;
 }
+
 
 .logo svg {
     height: 60px;
