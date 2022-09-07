@@ -15,7 +15,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4.5fr;
+    grid-template-columns: minmax(280px, 350px) minmax(800px, 100%);
     grid-template-rows: 1fr 5fr;
 
     height: 100vh;
@@ -41,7 +41,24 @@ header {
     gap: 10px;
 }
 
-#search-btn {
+.profile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.acc-name {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+
+#search-btn, #notif-btn {
     height: 30px;
     width: 30px;
     border: none;
@@ -49,10 +66,19 @@ header {
     background-color: var(--header-color);
 }
 
+#notif-btn {
+    height: 30px;
+    width: 30px;
+}
+
+#notif-btn > svg:hover {
+    animation-name: shake;
+    animation-duration: .5s;
+}
+
 #search-btn > svg:hover {
     height: 31px;
     width: 31px;
-    transition: .25ms;
 }
 
 #search { 
@@ -99,6 +125,7 @@ nav {
 
 
 .logo svg {
+    flex: 0 0 auto;
     height: 1.75em;
     width: auto;
 }
@@ -131,6 +158,10 @@ nav {
     font-size: 22px;
 }
 
+.nav-ul-container a > * {
+    flex: 0 0 auto;
+}
+
 /* main content */
 
 main {
@@ -138,4 +169,14 @@ main {
 
     grid-row-start: 2;
     grid-column-start: 2;
+}
+
+@keyframes shake {
+    20% {
+        rotate: -20deg
+    }
+
+    40% {
+        rotate: 20deg
+    }
 }
